@@ -67,6 +67,7 @@ print("\nSumm of all trades vertical is:")
 # TODO: explain vectrorization of summation 
 # https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops
 
+
 v_sum = sum(vertical["quantity"])
 print (v_sum)
 
