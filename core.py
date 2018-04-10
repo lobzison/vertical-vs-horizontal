@@ -64,5 +64,14 @@ v_firts = vertical["quantity"][0]
 print(v_firts)
 
 print("\nSumm of all trades vertical is:")
+# TODO: explain vectrorization of summation 
+# https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops
+
 v_sum = sum(vertical["quantity"])
 print (v_sum)
+
+# TODO: do example with loop
+# TODO: do example with filtering
+# TODO: do large scale examples and time them
+
+# Geat example https://www.quora.com/What-is-the-difference-between-a-column-oriented-and-a-row-oriented-database
