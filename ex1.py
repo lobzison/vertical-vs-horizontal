@@ -68,6 +68,14 @@ print("\nSumm of all trades vertical is:")
 # https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops
 # https://www.slideshare.net/arangodb/introduction-to-column-oriented-databases
 
+# Brute froce approach
+v_sum = 0
+for quanity in vertical["quantity"]:
+    v_sum += quanity
+    
+print (v_sum)
+
+
 v_sum = sum(vertical["quantity"])
 print (v_sum)
 
