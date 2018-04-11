@@ -93,3 +93,5 @@ print (get_sum(my_horiz_struct, my_columns[0]),
 
 print (get_sum_with_filter(my_horiz_struct, my_columns[0], my_columns[1], 500),
        get_sum_with_filter(my_vert_struct, my_columns[0], my_columns[1], 500))
+
+# TODO: output formatting
