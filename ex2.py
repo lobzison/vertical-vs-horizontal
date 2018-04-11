@@ -70,7 +70,6 @@ num_of_rows = 100000000 # 100mil
 print(calc_gb_size(size_of_row, num_of_rows))
 
 
-# TODO: do example with filtering
-# TODO: do large scale examples and time them
+# TODO: output formatting
 
 # Geat example https://www.quora.com/What-is-the-difference-between-a-column-oriented-and-a-row-oriented-database
