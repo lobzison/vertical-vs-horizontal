@@ -1,6 +1,8 @@
 """
 Demonstration of vertical vs horizontal approach for tables in data storage
 
+Part one - general idea
+
 Classical DB table structure(horizontal):
 columns gouped into a row, even if we want to get value from one colums we still acess the whole row
 """
@@ -64,23 +66,22 @@ v_firts = vertical["quantity"][0]
 print(v_firts)
 
 print("\nSumm of all trades vertical is:")
-# TODO: explain vectrorization of summation 
-# https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops
-# https://www.slideshare.net/arangodb/introduction-to-column-oriented-databases
 
 # Brute froce approach
 v_sum = 0
 for quanity in vertical["quantity"]:
     v_sum += quanity
-    
+
 print (v_sum)
 
+# But vectorization can be used
+# TODO: vectrorization of summation or why is it faster
+# https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops
+# 
 
 v_sum = sum(vertical["quantity"])
 print (v_sum)
 
-# TODO: do example with loop
-# TODO: do example with filtering
-# TODO: do large scale examples and time them
 
-# Geat example https://www.quora.com/What-is-the-difference-between-a-column-oriented-and-a-row-oriented-database
+# Geat example http://qr.ae/TU1SUO
+# https://www.slideshare.net/arangodb/introduction-to-column-oriented-databases
