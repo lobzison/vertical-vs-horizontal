@@ -15,3 +15,8 @@ Final part
 
 # Rule of a thumb - if your queries maily accesess few rows and lots of columns - row storage is great
 #                   if your queries maily accesess few columns and a lot of rows - columnar storage can offer much better performance
+
+
+# Additional links:
+# Geat example http://qr.ae/TU1SUO
+# Presentation of different storage types: https://www.slideshare.net/arangodb/introduction-to-column-oriented-databases
