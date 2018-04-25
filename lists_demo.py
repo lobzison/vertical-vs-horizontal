@@ -4,22 +4,34 @@ access by index is O(1)
 Examples of list:
 """
 empty_list = []
-print("Empty list:")
+print("1. Empty list:")
 print(empty_list)
 
+
+
+
 int_list = [1, 2]
-print('\nInteger list:')
+print('\n2. Integer list:')
 print(int_list)
 
+
+
+
 str_list = ["one", "two", "three"]
-print('\nString list:')
+print('\n3. String list:')
 print(str_list)
 
+
+
+
 comb_list = [1, "two", 3.0, [1]]
-print('\nCombined list, with nested list:')
+print('\n4. Combined list, with nested list:')
 print(comb_list)
+
+
+
 
 # Accesing the elements in the list:
 fist_elem = str_list[0]
-print('\nFirst element of a string list:')
+print('\n5. First element of a string list:')
 print(fist_elem)

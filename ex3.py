@@ -48,11 +48,16 @@ my_columns = get_col_names(num_cols)
 my_horiz_struct = get_horiz_structure(my_columns, num_rows)
 my_vert_struct = get_vert_structure(my_columns, num_rows)
 
+
+
+
 # Let's print a part of the tables 
-print("First 5 rows of horizontal structure:")
+print("1. First 5 rows of horizontal structure:")
 print_first(my_horiz_struct)
-print("\nFrits 5 cols of vertical structure:")
+print("\n2. Frits 5 cols of vertical structure:")
 print_first(my_vert_struct)
+
+
 
 
 # Implementation of select sum(col) form TABLE
@@ -87,7 +92,11 @@ col_index = 0
 horiz_first_col_sum = get_sum(my_horiz_struct, my_columns[col_index])
 vert_firts_col_sum = get_sum(my_vert_struct, my_columns[col_index])
 
-print("\nSum of the {} column in horizontal = {} and in vertical = {}".format(
+
+
+
+
+print("\n3. Sum of the {} column in horizontal = {} and in vertical = {}".format(
     col_index + 1, horiz_first_col_sum, vert_firts_col_sum))
 
 filter_number = 500
@@ -96,9 +105,17 @@ horiz_first_col_sum_filtered = get_sum_with_filter(
 vert_first_col_sum_filtered = get_sum_with_filter(
     my_vert_struct, my_columns[col_index], my_columns[col_index + 1], filter_number)
 
-print("\nSum of the {} column where {} column > {}: in horizontal = {} and in vertical = {}".format(
+
+
+
+
+print("\n4. Sum of the {} column where {} column > {}: in horizontal = {} and in vertical = {}".format(
     col_index + 1, col_index + 2, filter_number, horiz_first_col_sum_filtered, vert_first_col_sum_filtered))
 delimit_output()
+
+
+
+
 
 # Let's calculate sum and sum with filter on bigger table, and time them
 num_cols = 25
@@ -110,7 +127,10 @@ my_horiz_struct = get_horiz_structure(my_columns, num_rows)
 print('Horizontal structure builded\n')
 delimit_output()
 
-print("Timing for sums without filter")
+
+
+
+print("5. Timing for sums without filter")
 print("Horizontal")
 horiz_first_col_sum = get_sum(my_horiz_struct, my_columns[col_index])
 print("Vertical")
@@ -118,8 +138,11 @@ vert_first_col_sum = get_sum(my_vert_struct, my_columns[col_index])
 delimit_output()
 
 
+
+
+
 filter_number = 999
-print("Timing for sums with filter")
+print("6. Timing for sums with filter")
 print("Horizontal")
 horiz_first_col_sum_filtered = get_sum_with_filter(
     my_horiz_struct, my_columns[col_index], my_columns[col_index+1], filter_number)

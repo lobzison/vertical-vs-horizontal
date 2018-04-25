@@ -25,19 +25,27 @@ def calc_gb_size(num_rows, row_size):
 # Lets calculate I/O needed to calculate sum(quantity) with horizontal
 size_of_row = 10 + 10 + 30 + 30 + 10 + 30 + 30 + 30
 num_of_rows = 100000000 # 100mil
-print('\nI/O needed to calculate sum(quantity) with horizontal:')
+print('\n1. I/O needed to calculate sum(quantity) with horizontal:')
 print(calc_gb_size(size_of_row, num_of_rows))
+
+
+
 
 
 #Now the same for vertical
 size_of_row = 10
 num_of_rows = 100000000 # 100mil
-print('\nI/O needed to calculate sum(quantity) with vertical:')
+print('\n2. I/O needed to calculate sum(quantity) with vertical:')
 print(calc_gb_size(size_of_row, num_of_rows))
 
-# In real world we use much more complicated queries than just aggregate function over the whole table
-# les'l look at the simple filtration
-# select sum(quantity) from BIG_TABLE where code2 > 10 000
+
+
+
+
+# In real world we use much more complicated queries than just aggregate function
+# over the whole table
+# let's look at the simple filtration
+# select sum(quantity) from BIG_TABLE where code3 > 2 000
 # for horizontal approach I/O will remain the same
 # lest look how we can get it with vertical
 
@@ -59,12 +67,16 @@ def get_sum_with_filter(table, sum_col_name, filter_col_name, amount):
         if filter_col[idx] > amount:    # if value of filter column on that index is > that amount
             result_sum += sum_col[idx]  # add value of sum column on that index to total summ
 
-    print('\nThe summ of {} column with {} column > {} is {}' # print formatted results
+    print('\n3. The summ of {} column with {} column > {} is {}' # print formatted results
           .format(sum_col_name, filter_col_name, amount, result_sum))
 
 get_sum_with_filter(vertical, "quantity", "code3", 2000)
 
-print('\nmax I/O needed to calculate sum(quantity) with vertical and one condition:')
+
+
+
+
+print('\n4. Max I/O needed to calculate sum(quantity) with vertical and one condition:')
 size_of_row = 10 + 30
 num_of_rows = 100000000 # 100mil
 print(calc_gb_size(size_of_row, num_of_rows))
